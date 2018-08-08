@@ -1,0 +1,34 @@
+{
+  "name": "3percentbroker-website-remodel",
+  "version": "0.0.1",
+  "description": "The purpose of this remodel is to build a modern, responsive website for 3percentbroker.com in line with the basic functionality of similar real estate websites.",
+  "main": "index.js",
+  "scripts": {
+    "start": "run-p watch & live-server",
+    "build": "run-s clean compile-sass build-with-parcel",
+    "watch": "node-sass ./sass -w -o ./dev/css --source-map ./dev/css/ --source-map-contents",
+    "compile-sass": "node-sass sass/main.scss dev/css/style.css",
+    "clean": "rm -rf dist",
+    "build-with-parcel": "parcel build ./dev/index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/3percentbroker/3percentbroker.com.git"
+  },
+  "author": "Morgan Newman <mpnewman95@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/3percentbroker/3percentbroker.com/issues"
+  },
+  "homepage": "https://github.com/3percentbroker/3percentbroker.com#readme",
+  "devDependencies": {
+    "autoprefixer": "^9.1.0",
+    "babel-preset-env": "^1.7.0",
+    "node-sass": "^4.9.2",
+    "normalize.css": "^8.0.0",
+    "npm-run-all": "^4.1.3",
+    "parcel-bundler": "^1.9.7",
+    "postcss-modules": "^1.3.2",
+    "stylelint": "^9.4.0"
+  }
+}

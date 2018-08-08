@@ -1,7 +1,3 @@
-/.bash_history
-/.ssh
-/.viminfo
-/Backup
-/archive.zip
-/logs
-/.DS_Store
+.DS_Store
+node_modules
+.cache
