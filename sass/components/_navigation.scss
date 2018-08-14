@@ -1,0 +1,74 @@
+.navigation {
+  background-color: $primary-color;
+  // Display correct nav based on screen size
+  &--mobile {
+    @include desktop {
+      display: none;
+    }
+  }
+  &--desktop {
+    @include below-desktop {
+      display: none;
+    }
+  }
+  // Set nav height
+  height: 60px;
+  @include desktop {
+    height: 80px;
+  }
+}
+
+// Constrain the width of the nav elements
+.navigation__wrapper {
+  position: relative;
+  margin: 0 auto;
+  &--desktop {
+    max-width: 1000px;
+  }
+  &--mobile {
+    text-align: center;
+    max-width: 90%;
+    height: 60px;
+  }
+}
+
+// Position the nav logo
+.navigation__logo {
+  // position: absolute;
+  width: auto;
+  height: 30px;
+  &--mobile {
+    margin: 15px 0;
+  }
+  &--desktop {
+    height: 45px;
+    margin: 16px 0;
+  }
+}
+
+// Position the nav link blocks
+.navigation__list {
+  display: inline-block;
+  &--desktop {
+    float: right;
+    line-height: 80px;
+  }
+  &--mobile {
+    background-color: $primary-contrast-color;
+    height: 30px;
+    width: 100%;
+    text-align: center;
+    line-height: 30px;
+  }
+}
+
+// Position the nav items
+.navigation__item {
+  list-style: none;
+  display: inline-block;
+  text-transform: uppercase;
+  margin-right: 12px;
+    &--mobile:last-child {
+      margin-right: 0px;
+    }
+  }

@@ -4,7 +4,8 @@ html {
 }
 *, *:before, *:after {
   box-sizing: inherit;
-  
+  margin: 0;
+  padding: 0;
 }
 
 @-ms-viewport {
@@ -25,5 +26,6 @@ html {
 @import 'layout/grid';
 @import 'layout/navigation';
 // components
+@import 'components/navigation';
 // pages
 @import 'pages/home';
