@@ -1,0 +1,20 @@
+mixin navLink(name, link) 
+  li(class=[{'header__nav-item-active': name === current}, 'header__nav-item'])
+    a(
+      href=link
+      class='header__nav-link'
+      ) #{name}
+
+header.header
+  // Logo
+  include ../base/logo
+  // Desktop Nav
+  nav.header__nav(role='navigation')
+    // Links
+    ul.header__nav-list
+      +navLink('Home', 'index.html')
+      +navLink('Buying', 'buying.html')
+      +navLink('Selling', 'selling.html')
+      +navLink('About Us', 'about.html')
+  // Button
+  include ../base/cta
