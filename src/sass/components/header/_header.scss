@@ -1,0 +1,29 @@
+// Justify body to make room for nav
+.page {
+  padding-top: 112px;
+  font-size: 14px;
+  line-height: 1.5;
+  margin: 0;
+
+  @include respond-above-small {
+    padding-top: 72px;
+  }
+}
+
+.header {
+  background-color: $primary-color;
+  @include shadow;
+  width: 100%;
+  // Set height
+  height: 112px;
+  margin: 0;
+  @include respond-above-small {
+    height: 72px;
+  }
+
+  // Set positioning
+  position: fixed;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+}

@@ -1,0 +1,17 @@
+.btn__cta {
+  max-height: 48px; // Prevent flexbox from stretching vertically
+  letter-spacing: 5%;
+  font-size: 1.4em;
+  margin: 12px;  
+  border: 0;
+  border-radius: 5px;
+  padding: 10px;
+  color: white;
+  background: $contrast-color;
+  background: linear-gradient(0deg, rgba(224,140,79,1) 0%, rgba(252,155,85,1) 100%);
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.btn__cta:hover, .btn__cta:focus, .btn__cta:active {
+  background: darken($contrast-color, 5%);
+}

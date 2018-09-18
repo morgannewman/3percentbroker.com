@@ -4,12 +4,13 @@
   "description": "The purpose of this remodel is to build a modern, responsive website for 3percentbroker.com in line with the basic functionality of similar real estate websites.",
   "main": "index.js",
   "scripts": {
-    "start": "run-p watch & live-server",
-    "watch": "node-sass ./sass -rw -o ./dev/css --source-map ./dev/css/ --source-map-contents",
+    "start": "run-p watch-sass watch-pug & live-server ./dist",
+    "watch-sass": "node-sass -rw ./src/sass -o ./dist/css --source-map ./dist/css/ --source-map-contents",
+    "watch-pug": "pug -w ./src/pug -o ./dist/",
     "build": "run-s clean compile-sass build-with-parcel",
     "clean": "rm -rf dist",
-    "compile-sass": "node-sass sass/main.scss dev/css/main.css",
-    "build-with-parcel": "parcel build ./dev/index.html --public-url ./"
+    "compile-sass": "node-sass sass/main.scss dist/css/main.css",
+    "build-with-parcel": "parcel build ./dist/index.html --public-url ./"
   },
   "repository": {
     "type": "git",

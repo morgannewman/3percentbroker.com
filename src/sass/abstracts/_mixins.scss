@@ -1,0 +1,23 @@
+@mixin shadow {
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+$small-breakpoint: 660px;
+
+@mixin respond-small-only {
+  @media (max-width: #{$small-breakpoint}) {
+    @content;
+  }
+}
+
+@mixin respond-above-small {
+  @media (min-width: #{$small-breakpoint + 1}) {
+    @content;
+  }
+}
+
+@mixin print {
+  @media print {
+    @content;
+  }
+}

@@ -1,0 +1,92 @@
+.header__nav {
+  margin-left: auto;
+  display: block;
+  opacity: 1;
+
+  @include respond-small-only {
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 64px;
+  }
+}
+
+.header__nav-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  @include respond-small-only {
+    display: table;
+    width: 100%;
+  }
+}
+
+.header__nav-item {
+  @include respond-above-small {
+    display: inline-block;
+
+    &:first-child {
+      display: none;
+    }
+  }
+  @include respond-small-only {
+    table-layout: fixed;
+    display: table-cell;
+    width: 25%;
+  }
+
+  text-align: center;
+}
+
+.header__nav-link {
+  font-size: 20px;
+  display: inline-block;
+  line-height: 48px;
+  position: relative;
+
+  @include respond-above-small {
+    padding: 0 16px;
+    line-height: 72px;
+  }
+}
+
+.header__nav-link:visited {
+  text-decoration: none;
+  color: inherit;
+}
+
+.header__nav-item-active:visited {
+  color: white;
+}
+
+// Add a nav underline to sizes above mobile
+.header__nav-link:hover,
+.header__nav-item-active .header__nav-link {
+  text-decoration: none;
+  color: white;
+
+  &::after {
+    @include respond-above-small {
+      color: white;
+      content: "";
+      position: absolute;
+      left: 0;
+      width: 100%;
+      height: 3px;
+      background-color: white;
+      // Position the underline on hover
+      bottom: 2px;
+    }
+  }
+}
+
+.header__nav-link:active {
+  text-decoration: none;
+}
+
+.header__nav-item-active {
+  @include respond-small-only {
+    background-color: darken($primary-color, 10%);
+  }
+}

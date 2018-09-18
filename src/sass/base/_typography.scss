@@ -1,0 +1,40 @@
+html {
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 1em;
+}
+
+@mixin main-heading-lg {
+  font-size: 3.998em;
+  letter-spacing: -5%;
+  line-height: 82%;
+}
+
+@mixin main-heading-md {
+  font-size: 2.827em;
+  letter-spacing: -5%;
+  line-height: 82%;
+}
+
+@mixin main-heading-sm {
+  font-size: 2.827em;
+  text-transform: uppercase;
+  letter-spacing: 5%;
+}
+
+@mixin sub-heading-lg {
+  font-size: 1.999em;
+  text-transform: uppercase;
+  letter-spacing: 5%;
+}
+
+@mixin sub-heading-md {
+  font-size: 1.414em;
+  text-transform: uppercase;
+  letter-spacing: 5%;
+}
+
+@mixin sub-heading-sm {
+  font-size: 1em;
+  text-transform: uppercase;
+  letter-spacing: 5%;
+}

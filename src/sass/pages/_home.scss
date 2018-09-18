@@ -1,0 +1,16 @@
+.hero {
+  width: 100vw;
+  height: 80vh;
+  /* Background styles */
+  background-image: url('../img/family-cover.jpg');
+  background-size: cover;
+  background-position: right center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  text-align: left;
+}
+
+.hero h1 {
+  margin: 0 8vw;
+  padding-top: 20vh;
+}
