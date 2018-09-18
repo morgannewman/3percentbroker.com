@@ -1062,6 +1062,25 @@ a:active {
   .header__nav-item-active {
     background-color: #639941; } }
 
+.showcase__item {
+  display: inline-block;
+  text-align: center;
+  height: 72px;
+  line-height: 72px;
+  width: 100%; }
+  @media (min-width: 661px) {
+    .showcase__item {
+      width: 33.33%; } }
+  .showcase__item:nth-child(1) {
+    background-color: #005e00; }
+  .showcase__item:nth-child(2) {
+    background-color: #004400; }
+  .showcase__item:nth-child(3) {
+    background-color: #002b00; }
+
+.showcase__link {
+  color: white; }
+
 .hero {
   width: 100vw;
   height: 80vh;
