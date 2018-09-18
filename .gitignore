@@ -3,3 +3,8 @@ node_modules
 .cache
 .gitconfig
 .yarn-error.log
+# ignore extraneous pug-cli compiled files
+dist/_base.html
+dist/abstracts
+dist/base
+dist/components
