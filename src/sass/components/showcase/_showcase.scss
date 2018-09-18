@@ -1,0 +1,26 @@
+.showcase__item {
+  // Center links
+  display: inline-block;
+  text-align: center;
+  height: 72px;
+  line-height: 72px;
+  // Responsive sizing
+  width: 100%;
+  @include respond-above-small {
+    width: 33.33%;
+  }
+  // Set color cascade effect
+  &:nth-child(1) {
+    background-color: darken($primary-contrast-color, 5%);
+  }
+  &:nth-child(2) {
+    background-color: darken($primary-contrast-color, 10%);
+  }
+  &:nth-child(3) {
+    background-color: darken($primary-contrast-color, 15%);
+  }
+}
+
+.showcase__link {
+  color: white;
+}
