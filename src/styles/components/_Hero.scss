@@ -1,0 +1,62 @@
+.hero {
+  text-align: center;
+
+  min-height: 60vh;
+
+  background-image: url('../../src/assets/hero.png');
+  background-size: cover;
+  background-position: center;
+}
+
+.hero-content {
+  padding: 10vh 16px;
+  color: white;
+}
+
+.hero-list {
+  list-style: none;
+  font-style: italic;
+
+  // Removes baseline padding
+  padding-left: 0;
+}
+
+.hero-list > li {
+  display: inline-block;
+
+  // Prevents stylish spaces from being removed
+  white-space: pre;
+
+  &:after {
+    content: "  •  ";
+  }
+
+  &:last-of-type {
+    &:after {
+      content: none;
+    }
+  }
+}
+
+.hero-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  max-width: 1024px;
+  margin: 0 auto;
+
+  padding: 8px 16px;
+
+  @media (min-width: 420px) {
+    padding: 8px 32px;
+  }
+
+  @media (min-width: 824) {
+    padding: 8px 64px;
+  }
+
+  &-logo {
+    height: 30px;
+  }
+}
