@@ -24,39 +24,15 @@
 .hero-list > li {
   display: inline-block;
 
-  // Prevents stylish spaces from being removed
-  white-space: pre;
-
   &:after {
     content: "  •  ";
+    // Prevents extra spaces from being removed
+    white-space: pre;
   }
 
   &:last-of-type {
     &:after {
       content: none;
     }
-  }
-}
-
-.hero-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-
-  max-width: 1024px;
-  margin: 0 auto;
-
-  padding: 8px 16px;
-
-  @media (min-width: 420px) {
-    padding: 8px 32px;
-  }
-
-  @media (min-width: 824) {
-    padding: 8px 64px;
-  }
-
-  &-logo {
-    height: 30px;
   }
 }

@@ -1,15 +1,24 @@
 $color: $green;
 
 .cta-button {
-  background-color: $color !important;
-  border-color: $color !important;
+  color: white;
+  background-color: $color;
+  font-size: 1.2em;
+
+  border: 0px;
+  border-radius: 5px;
+  padding: 8px 20px;
 
   &:hover,
   &:active {
-    background-color: darken($color, 10%) !important;
-    border-color: darken($color, 10%) !important;
+    background-color: darken($color, 10%);
   }
   &:visited {
-    background-color: $color !important;
+    background-color: $color;
   }
+}
+
+.cta-phone {
+  color: white;
+  transform: rotate(90deg);
 }

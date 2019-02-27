@@ -1,19 +1,13 @@
 import React from 'react';
 
 import CTAButton from './common/CTAButton';
+import Nav from './common/Nav';
 
 export default class Hero extends React.Component {
   render() {
     return (
       <section className="hero">
-        <header className="hero-header">
-          <img
-            className="hero-header-logo"
-            src={require('../assets/white-logo.png')}
-            alt=""
-          />
-          <nav className="hero-header-nav">NAV</nav>
-        </header>
+        <Nav />
         <div className="hero-content">
           <h1 className="hero-title">
             Traditional Real Estate Services, On Sale

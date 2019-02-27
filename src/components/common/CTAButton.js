@@ -1,11 +1,11 @@
 import React from 'react';
 
-import Button from 'react-bootstrap/Button';
+import { FaPhone as PhoneIcon } from 'react-icons/fa';
 
 export default function CTA() {
   return (
-    <Button size="lg" className="cta-button">
-      Call Now
-    </Button>
+    <button className="cta-button">
+      <PhoneIcon className="cta-phone" /> Call Now
+    </button>
   );
 }
