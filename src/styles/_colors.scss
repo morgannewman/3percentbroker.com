@@ -1,6 +1,6 @@
 $green: #66bb46;
-$accent: #007700;
-$off-white: #f7f9fc;
+$light-accent: lighten($green, 20%);
+$dark-accent: #007700;
 
 $dark-gray: #444444;
 $dark-grey: #444444;
@@ -8,3 +8,4 @@ $light-gray: #e5e5e5;
 $light-grey: #e5e5e5;
 
 $black: #1c1c1c;
+$off-white: #f7f9fc;

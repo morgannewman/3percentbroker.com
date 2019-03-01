@@ -43,8 +43,8 @@
   }
 
   color: white;
-  padding-top: 5rem !important;
-  padding-bottom: 5rem !important;
+  padding-top: 4rem !important;
+  padding-bottom: 4rem !important;
 }
 
 .hero-content > h1 {
@@ -59,7 +59,7 @@
   padding-bottom: 1rem;
 
   // The point where the ul becomes 1 line
-  @media (min-width: 1217px) {
+  @media (min-width: 1264px) {
     padding-bottom: 2rem;
   }
   // Removes baseline padding
