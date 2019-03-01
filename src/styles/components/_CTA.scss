@@ -16,3 +16,21 @@ $color: $green;
     background-color: $color;
   }
 }
+
+.phone-cta {
+  margin: 32px 0;
+  text-align: center;
+
+  &-title {
+    font-size: 0.9rem;
+    font-weight: bold;
+    margin-bottom: 4px;
+  }
+
+  &-button {
+    background: none;
+    border: none;
+    font-size: 1.6rem;
+    color: $green;
+  }
+}

@@ -22,7 +22,7 @@ export default class Nav extends React.Component {
             <span className="nav-link_search-text">Property Search</span>{' '}
             <SearchIcon className="nav-link_search-icon" />
           </button>
-          <button className="nav-link">209-765-7264</button>
+          <button className="nav-link">(209) 765-7264</button>
         </nav>
       </header>
     );
