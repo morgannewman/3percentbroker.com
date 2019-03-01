@@ -1,6 +1,7 @@
 import React from 'react';
 
-import CTAButton from './common/CTAButton';
+import CTAButton from './common/CTA/Button';
+import SearchButton from './SearchButton';
 import Nav from './common/Nav';
 
 export default class Hero extends React.Component {
@@ -17,7 +18,8 @@ export default class Hero extends React.Component {
             <li>Eliminate Confusion</li>
             <li>Get Expert Service</li>
           </ul>
-          <CTAButton size="lg">Call Now</CTAButton>
+          <CTAButton />
+          <SearchButton />
         </div>
       </section>
     );

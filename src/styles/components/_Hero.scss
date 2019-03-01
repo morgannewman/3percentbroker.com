@@ -19,26 +19,16 @@
   @include apply-max-width;
 
   @media (min-width: 596px) {
-    h1,
     p,
     ul {
-      max-width: 50vw;
+      max-width: 356px;
     }
   }
 
-  @media (min-width: 1024px) {
-    h1,
+  @media (min-width: 1180px) {
     p,
     ul {
-      max-width: 40vw;
-    }
-  }
-
-  @media (min-width: 1920px) {
-    h1,
-    p,
-    ul {
-      max-width: 30vw;
+      max-width: 656px;
     }
   }
 
@@ -50,6 +40,31 @@
 .hero-content > h1 {
   max-width: 460px;
   margin-bottom: 2rem;
+  margin-left: auto;
+  margin-right: auto;
+
+  @media (min-width: 596px) {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+.hero-content > button {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+
+  &:first-of-type {
+    margin-bottom: 1rem;
+  }
+
+  @media (min-width: 596px) {
+    display: inline-block;
+    &:first-of-type {
+      margin-bottom: 0;
+      margin-right: 1rem;
+    }
+  }
 }
 
 .hero-list {
@@ -58,14 +73,13 @@
 
   padding-bottom: 1rem;
 
+  // Removes baseline padding
+  padding-left: 0;
+
   // The point where the ul becomes 1 line
   @media (min-width: 1264px) {
     padding-bottom: 2rem;
   }
-  // Removes baseline padding
-  padding-left: 0;
-
-  // font-size: 1.4rem;
 }
 
 .hero-list > li {
