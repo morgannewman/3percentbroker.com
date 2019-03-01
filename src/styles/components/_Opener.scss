@@ -1,0 +1,52 @@
+.opener {
+  background-color: $off-white;
+  padding-top: 4rem !important;
+  padding-bottom: 4rem !important;
+}
+.opener-title {
+  @include apply-max-width;
+  padding-bottom: 2rem;
+}
+
+.opener-lists {
+  @include apply-max-width;
+
+  padding-bottom: calc(2rem - 24px);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  & > ul {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @media (min-width: 720px) {
+    flex-direction: row;
+  }
+}
+
+.opener-li {
+  display: block;
+
+  // All items should be width of largest element to center all items with a left text align
+  width: 279px;
+
+  margin-bottom: 24px;
+
+  white-space: pre;
+
+  &-checkmark {
+    float: left;
+    height: 1rem;
+  }
+}
+
+.opener-text {
+  @include apply-max-width;
+  font-style: italic;
+  // font-weight: 700;
+  text-align: center;
+
+  padding-bottom: 2rem;
+}

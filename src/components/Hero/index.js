@@ -1,8 +1,8 @@
 import React from 'react';
 
-import CTAButton from './common/CTA/Primary';
+import CTAButton from '../CTA/PrimaryButton';
 import SearchButton from './SearchButton';
-import Nav from './common/Nav';
+import Nav from './Nav';
 
 export default class Hero extends React.Component {
   render() {

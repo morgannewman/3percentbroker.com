@@ -18,6 +18,16 @@
 .hero-content {
   @include apply-max-width;
 
+  padding: 16px;
+
+  @media (min-width: 420px) {
+    padding: 16px 32px;
+  }
+
+  @media (min-width: 824px) {
+    padding: 32px 64px;
+  }
+
   @media (min-width: 596px) {
     p,
     ul {
@@ -77,7 +87,7 @@
   padding-left: 0;
 
   // The point where the ul becomes 1 line
-  @media (min-width: 1264px) {
+  @media (min-width: 1180px) {
     padding-bottom: 2rem;
   }
 }

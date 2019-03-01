@@ -14,7 +14,7 @@ import ThreeStepPlan from '../components/ThreeStepPlan';
 import About from '../components/About';
 import Closing from '../components/Closing';
 import Pricing from '../components/Pricing';
-import PhoneSection from '../components/common/CTA/Phone';
+import PhoneSection from '../components/CTA/Phone';
 
 const IndexPage = () => {
   return (
