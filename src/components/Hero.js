@@ -1,6 +1,6 @@
 import React from 'react';
 
-import CTAButton from './common/CTA/Button';
+import CTAButton from './common/CTA/Primary';
 import SearchButton from './SearchButton';
 import Nav from './common/Nav';
 
