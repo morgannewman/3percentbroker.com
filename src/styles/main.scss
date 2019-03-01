@@ -1,7 +1,9 @@
+@import './reset';
 @import './colors';
 @import './typography';
 @import './globals';
 @import './layout';
+@import './mixins';
 // Components
 @import './components/Nav';
 @import './components/CTAButton';

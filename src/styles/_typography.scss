@@ -6,8 +6,21 @@ html {
 
 h1 {
   letter-spacing: -0.5px;
-  font-size: 2.8rem;
-  line-height: 95%;
+  font-weight: 700;
+  font-size: 2.4rem;
+  @media (min-width: 484px) {
+    font-size: 2.8rem;
+  }
+
+  @media (min-width: 1920px) {
+    font-size: 3.8rem;
+  }
+
+  // @media (min-width: 1920px) {
+  //   font-size: 4.8rem;
+  // }
+
+  line-height: 105%;
 }
 
 h2,

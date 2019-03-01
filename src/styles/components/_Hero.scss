@@ -1,7 +1,14 @@
 .hero {
   text-align: center;
+  padding-bottom: 64px;
 
-  min-height: 60vh;
+  @media (min-width: 1024px) {
+    padding-bottom: 128px;
+  }
+
+  @media (min-width: 596px) {
+    text-align: left;
+  }
 
   background-image: url('../../src/assets/hero.png');
   background-size: cover;
@@ -9,30 +16,77 @@
 }
 
 .hero-content {
-  padding: 10vh 16px;
+  @include apply-max-width;
+
+  @media (min-width: 596px) {
+    h1,
+    p,
+    ul {
+      max-width: 50vw;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    h1,
+    p,
+    ul {
+      max-width: 40vw;
+    }
+  }
+
+  @media (min-width: 1920px) {
+    h1,
+    p,
+    ul {
+      max-width: 30vw;
+    }
+  }
+
   color: white;
+  padding-top: 5rem !important;
+  padding-bottom: 5rem !important;
+}
+
+.hero-content > h1 {
+  max-width: 460px;
+  margin-bottom: 2rem;
 }
 
 .hero-list {
   list-style: none;
-  font-style: italic;
+  text-transform: uppercase;
 
+  padding-bottom: 1rem;
+
+  // The point where the ul becomes 1 line
+  @media (min-width: 1217px) {
+    padding-bottom: 2rem;
+  }
   // Removes baseline padding
   padding-left: 0;
+
+  // font-size: 1.4rem;
 }
 
 .hero-list > li {
-  display: inline-block;
-
-  &:after {
-    content: "  •  ";
-    // Prevents extra spaces from being removed
-    white-space: pre;
+  @media (max-width: 369px) {
+    display: block;
+    padding-bottom: 4px;
+    font-style: italic;
   }
 
-  &:last-of-type {
+  @media (min-width: 370px) {
+    display: inline-block;
     &:after {
-      content: none;
+      content: "  •  ";
+      // Prevents extra spaces from being removed
+      white-space: pre;
+    }
+
+    &:last-of-type {
+      &:after {
+        content: none;
+      }
     }
   }
 }
