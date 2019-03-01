@@ -23,6 +23,10 @@ const IndexPage = () => {
         <title>3PercentBroker.com | It's Simply a Better Deal</title>
         <link rel="canonical" href="https://3percentbroker.com/" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link
+          href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,400i,700"
+          rel="stylesheet"
+        />
       </Helmet>
       <main className="main">
         <Hero />
