@@ -1,0 +1,227 @@
+.savings-calculator {
+  @include apply-max-width;
+
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+
+  text-align: center;
+
+  position: relative;
+}
+
+.savings-calculator-title {
+  margin-bottom: 2rem;
+}
+
+.savings-calculator-text {
+  max-width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+
+  margin-bottom: 2rem;
+}
+
+.savings-calculator-savings {
+  margin-bottom: 4rem;
+  font-weight: 400;
+  text-transform: initial;
+
+  & > span {
+    display: block;
+    &:last-of-type {
+      color: $green;
+    }
+  }
+}
+
+.savings-calculator-slider-container {
+  position: relative;
+  max-width: 720px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.savings-calculator-slider {
+  width: 100%;
+  max-width: 720px;
+  margin-bottom: 4rem;
+  -webkit-appearance: none;
+  z-index: 5;
+
+  &:focus {
+    outline: none;
+  }
+  &::-webkit-slider-runnable-track {
+    height: 1px;
+    cursor: pointer;
+    box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
+    background: #444444;
+    border-radius: 0px;
+    border: 0px solid #010101;
+  }
+  &::-webkit-slider-thumb {
+    box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
+    border: 7.9px solid #007700;
+    height: 40px;
+    width: 40px;
+    border-radius: 50px;
+    background: #66bb46;
+    cursor: pointer;
+    -webkit-appearance: none;
+    margin-top: -19.5px;
+  }
+  &:focus::-webkit-slider-runnable-track {
+    background: #515151;
+  }
+  &::-moz-range-track {
+    height: 1px;
+    cursor: pointer;
+    box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
+    background: #444444;
+    border-radius: 0px;
+    border: 0px solid #010101;
+  }
+  &::-moz-range-thumb {
+    box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
+    border: 7.9px solid #007700;
+    height: 40px;
+    width: 40px;
+    border-radius: 50px;
+    background: #66bb46;
+    cursor: pointer;
+  }
+  &::-ms-track {
+    height: 1px;
+    cursor: pointer;
+    background: transparent;
+    border-color: transparent;
+    color: transparent;
+  }
+  &::-ms-fill-lower {
+    background: #373737;
+    border: 0px solid #010101;
+    border-radius: 0px;
+    box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
+  }
+  &::-ms-fill-upper {
+    background: #444444;
+    border: 0px solid #010101;
+    border-radius: 0px;
+    box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
+  }
+  &::-ms-thumb {
+    box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
+    border: 7.9px solid #007700;
+    height: 40px;
+    width: 40px;
+    border-radius: 50px;
+    background: #66bb46;
+    cursor: pointer;
+    height: 1px;
+  }
+  &:focus::-ms-fill-lower {
+    background: #444444;
+  }
+  &:focus::-ms-fill-upper {
+    background: #515151;
+  }
+}
+
+.savings-calculator-instructions {
+  position: absolute;
+  text-align: center;
+  width: 100%;
+
+  margin-top: -2rem;
+  font-size: 0.9rem;
+
+  color: #9f9f9f;
+}
+
+@keyframes slide-left {
+  0% {
+    transform: translateX(-50px);
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateX(-75px);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-right {
+  0% {
+    transform: translateX(50px);
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateX(75px);
+    opacity: 1;
+  }
+}
+
+@keyframes fade-out {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+.savings-calculator-slider-arrow {
+  position: absolute;
+  left: 0;
+  top: 12px;
+  width: 100%;
+  overflow: hidden;
+  margin-left: auto;
+  margin-right: auto;
+  height: 35px;
+
+  pointer-events: none;
+
+  &:first-of-type {
+    transform: translateX(-50px);
+    animation: slide-left 3s cubic-bezier(0.250, 0.460, 0.450, 0.940) infinite;
+  }
+  &:last-of-type {
+    transform: translateX(50px);
+    animation: slide-right 3s cubic-bezier(0.250, 0.460, 0.450, 0.940) infinite;
+  }
+}
+
+.savings-calculator-output_untouched {
+  width: 100%;
+  left: 0;
+}
+
+.savings-calculator-output {
+  position: absolute;
+  font-size: 1.4rem;
+  top: -1em;
+}
+
+.abcd {
+  position: relative;
+}
+
+.savings-calculator-slider-range-text {
+  color: lighten($dark-gray, 30%);
+  font-size: 0.8rem;
+  transition: opacity 0.2s;
+
+  &_left {
+    float: left;
+    margin-left: 3px;
+  }
+  &_right {
+    float: right;
+    margin-right: -3px;
+  }
+}
+
+.hidden {
+  opacity: 0;
+}
