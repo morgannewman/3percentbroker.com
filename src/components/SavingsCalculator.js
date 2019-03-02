@@ -188,6 +188,7 @@ export default class SavingsCalculator extends React.Component {
             </p>
           )}
         </div>
+        <p className="savings-calculator-disclaimer">These savings are just an estimate and may vary. Please <button>schedule a call</button> for a free professional estimate.</p>
       </section>
     );
   }
