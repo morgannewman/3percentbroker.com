@@ -1,15 +1,39 @@
 import React from 'react';
 
+import CTA from './CTA';
+import Call from '../assets/svg/call.svg';
+import Money from '../assets/svg/money.svg';
+import Plan from '../assets/svg/plan.svg';
+
 export default class ThreeStepPlan extends React.Component {
   render() {
     return (
-      <section>
-        <h2>Buy or Sell a Home Today</h2>
-        <ol>
-          <li>Schedule a Call</li>
-          <li>Some Tagline</li>
-          <li>Stop Overpaying for Services</li>
+      <section className="plan">
+        <ol className="plan-list">
+          <li className="plan-li">
+            <img className="plan-li-icon" src={Call} alt="" />
+            <h3 className="plan-li-title">Schedule a Call</h3>
+            <p className="plan-li-text">
+              We’ll answer questions and set up a meeting.
+            </p>
+          </li>
+          <li className="plan-li">
+            <img className="plan-li-icon" src={Plan} alt="" />
+            <h3 className="plan-li-title">Develop a Personalized Plan</h3>
+            <p className="plan-li-text">
+              We’ll plan how to get you the most out of buying or selling your
+              home.
+            </p>
+          </li>
+          <li className="plan-li">
+            <img className="plan-li-icon" src={Money} alt="" />
+            <h3 className="plan-li-title">Save Money</h3>
+            <p className="plan-li-text">
+              You’ll get excellent service from us while also saving money.
+            </p>
+          </li>
         </ol>
+        <CTA />
       </section>
     );
   }

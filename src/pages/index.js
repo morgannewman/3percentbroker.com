@@ -12,7 +12,6 @@ import WhoWeWorkWith from '../components/WhoWeWorkWith';
 import Testimonials from '../components/Testimonials';
 import ThreeStepPlan from '../components/ThreeStepPlan';
 import About from '../components/About';
-import Closing from '../components/Closing';
 import Pricing from '../components/Pricing';
 import PhoneSection from '../components/CTA/Phone';
 import SavingsCalculator from '../components/SavingsCalculator';
@@ -35,11 +34,10 @@ const IndexPage = () => {
         <PhoneSection />
         <Opener />
         <SavingsCalculator />
-        <WhoWeWorkWith />
-        <Testimonials />
         <ThreeStepPlan />
         <About />
-        <Closing />
+        <Testimonials />
+        <WhoWeWorkWith />
         <Pricing />
       </main>
     </div>

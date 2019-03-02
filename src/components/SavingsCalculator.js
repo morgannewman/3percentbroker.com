@@ -74,7 +74,7 @@ export default class SavingsCalculator extends React.Component {
 
     // Initial styling sets width to 100%. This prevents the first tick from setting the margin negative
     const max =
-      outputTextWidth > 200 ? sliderWidth - 65 : sliderWidth - outputTextWidth;
+      outputTextWidth > 200 ? sliderWidth - 64 : sliderWidth - outputTextWidth;
 
     console.log(sliderWidth, outputTextWidth, max);
 
@@ -188,7 +188,10 @@ export default class SavingsCalculator extends React.Component {
             </p>
           )}
         </div>
-        <p className="savings-calculator-disclaimer">These savings are just an estimate and may vary. Please <button>schedule a call</button> for a free professional estimate.</p>
+        <p className="savings-calculator-disclaimer">
+          These savings are just an estimate and may vary. Please{' '}
+          <button>schedule a call</button> for a free professional estimate.
+        </p>
       </section>
     );
   }
