@@ -54,13 +54,11 @@
   &::-webkit-slider-runnable-track {
     height: 1px;
     cursor: pointer;
-    box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
     background: #444444;
     border-radius: 0px;
     border: 0px solid #010101;
   }
   &::-webkit-slider-thumb {
-    box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
     border: 7.9px solid #007700;
     height: 40px;
     width: 40px;
@@ -76,16 +74,14 @@
   &::-moz-range-track {
     height: 1px;
     cursor: pointer;
-    box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
     background: #444444;
     border-radius: 0px;
     border: 0px solid #010101;
   }
   &::-moz-range-thumb {
-    box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
     border: 7.9px solid #007700;
-    height: 40px;
-    width: 40px;
+    height: 25px;
+    width: 25px;
     border-radius: 50px;
     background: #66bb46;
     cursor: pointer;
@@ -101,16 +97,13 @@
     background: #373737;
     border: 0px solid #010101;
     border-radius: 0px;
-    box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
   }
   &::-ms-fill-upper {
     background: #444444;
     border: 0px solid #010101;
     border-radius: 0px;
-    box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
   }
   &::-ms-thumb {
-    box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
     border: 7.9px solid #007700;
     height: 40px;
     width: 40px;
@@ -173,7 +166,7 @@
 .savings-calculator-slider-arrow {
   position: absolute;
   left: 0;
-  top: 12px;
+  top: 8px;
   width: 100%;
   overflow: hidden;
   margin-left: auto;
@@ -198,9 +191,10 @@
 }
 
 .savings-calculator-output {
-  position: absolute;
+  // position: absolute;
+  float: left;
   font-size: 1.4rem;
-  top: -1em;
+  margin-top: -1em;
 }
 
 .abcd {

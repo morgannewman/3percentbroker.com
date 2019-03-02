@@ -74,9 +74,9 @@ export default class SavingsCalculator extends React.Component {
 
     // Initial styling sets width to 100%. This prevents the first tick from setting the margin negative
     const max =
-      outputTextWidth > sliderWidth
-        ? sliderWidth - 65
-        : sliderWidth - outputTextWidth;
+      outputTextWidth > 200 ? sliderWidth - 65 : sliderWidth - outputTextWidth;
+
+    console.log(sliderWidth, outputTextWidth, max);
 
     const sliderPosition = this.input.value / 10;
 
@@ -92,9 +92,7 @@ export default class SavingsCalculator extends React.Component {
 
     // Initial styling sets width to 100%. This prevents the first tick from setting the margin negative
     const max =
-      outputTextWidth > sliderWidth
-        ? sliderWidth - 65
-        : sliderWidth - outputTextWidth;
+      outputTextWidth > 200 ? sliderWidth - 65 : sliderWidth - outputTextWidth;
 
     const leftTextWidth = this.leftRangeText.getBoundingClientRect().width;
     const rightTextWidth = this.rightRangeText.getBoundingClientRect().width;
@@ -145,6 +143,18 @@ export default class SavingsCalculator extends React.Component {
               alt=""
             />
           )}
+          <output
+            className={`savings-calculator-output ${!touched
+              ? 'savings-calculator-output_untouched'
+              : ''}`}
+            ref={(output) => (this.output = output)}
+            style={
+              touched ? { marginLeft: this.calculateOutputOffset() + 'px' } : {}
+            }
+          >
+            {value}
+          </output>
+
           <label
             className={`savings-calculator-slider-range-text savings-calculator-slider-range-text_left ${leftOverlap
               ? 'hidden'
@@ -162,17 +172,6 @@ export default class SavingsCalculator extends React.Component {
             $2,000,000
           </label>
 
-          <output
-            className={`savings-calculator-output ${!touched
-              ? 'savings-calculator-output_untouched'
-              : ''}`}
-            ref={(output) => (this.output = output)}
-            style={
-              touched ? { marginLeft: this.calculateOutputOffset() + 'px' } : {}
-            }
-          >
-            {value}
-          </output>
           <input
             onInput={this.updateSliderText}
             className="savings-calculator-slider"
