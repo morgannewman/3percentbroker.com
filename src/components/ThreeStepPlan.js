@@ -4,11 +4,22 @@ import CTA from './CTA';
 import Call from '../assets/svg/call.svg';
 import Money from '../assets/svg/money.svg';
 import Plan from '../assets/svg/plan.svg';
+import Quote from '../assets/svg/quote-bubble.svg';
 
 export default class ThreeStepPlan extends React.Component {
   render() {
     return (
       <section className="plan">
+        <div className="plan-quote-container">
+          <img className="plan-quote-bubble" src={Quote} alt="" />
+          <h2 className="plan-quote-title">
+            "Our transaction was seamless because David was there walking us
+            through every little detail, explaining the ins-and-outs of every
+            step."
+          </h2>
+          <p className="plan-quote-text">Andrew and Dallas</p>
+          <p className="plan-quote-text">Clients in Modesto, CA</p>
+        </div>
         <ol className="plan-list">
           <li className="plan-li">
             <img className="plan-li-icon" src={Call} alt="" />

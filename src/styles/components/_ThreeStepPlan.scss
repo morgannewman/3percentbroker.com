@@ -4,13 +4,56 @@
   padding-bottom: 4rem;
 }
 
+.plan-quote {
+  &-container {
+    margin-bottom: 4rem;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  &-bubble {
+    display: block;
+
+    height: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1rem;
+  }
+
+  &-title {
+    @include apply-max-width;
+    text-transform: initial;
+    font-style: italic;
+    line-height: 120%;
+    margin-bottom: 1rem;
+    max-width: 650px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  &-text {
+    @include apply-max-width;
+    text-transform: uppercase;
+    &:first-of-type {
+      font-weight: bold;
+      margin-bottom: 0.5rem;
+    }
+
+    &:last-of-type {
+      font-style: italic;
+    }
+  }
+}
+
 .plan-list {
-  max-width: 750px;
+  @include apply-max-width;
+  max-width: 1024px;
   margin-left: auto;
   margin-right: auto;
   display: flex;
   flex-direction: column;
-  @media (min-width: 732px) {
+  @media (min-width: 1024px) {
     flex-direction: row;
   }
   align-items: center;
@@ -24,18 +67,20 @@
   align-items: center;
 
   &-icon {
-    height: 90px;
-    margin-bottom: 1rem;
+    height: 160px;
+    margin-bottom: 2rem;
   }
 
   &-title {
-    font-size: 0.9rem;
+    font-size: 1.2rem;
     font-weight: bold;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
   }
 
   &-text {
-    font-size: 0.9rem;
+    font-size: 1.1rem;
+    line-height: 120%;
+    height: 3rem;
     color: gray;
     font-style: italic;
     max-width: 25ch;
