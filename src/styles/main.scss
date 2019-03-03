@@ -1,4 +1,6 @@
-@import './reset';
+// Vendor
+@import './vendor/reset';
+// Base
 @import './colors';
 @import './typography';
 @import './globals';
@@ -12,3 +14,5 @@
 @import './components/Opener';
 @import './components/SavingsCalculator';
 @import './components/ThreeStepPlan';
+@import './components/Testimonials';
+@import './components/About';

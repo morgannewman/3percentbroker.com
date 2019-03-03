@@ -1,0 +1,16 @@
+.about {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  background-color: $off-white;
+
+  &-title {
+    @include apply-max-width;
+    margin-bottom: 2rem;
+  }
+
+  &-text {
+    @include apply-max-width;
+    line-height: 120%;
+    max-width: 75ch;
+  }
+}

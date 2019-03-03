@@ -35,9 +35,9 @@ const IndexPage = () => {
         <Opener />
         <SavingsCalculator />
         <ThreeStepPlan />
-        <About />
         <Testimonials />
-        <WhoWeWorkWith />
+        <About />
+        {/* <WhoWeWorkWith /> */}
         <Pricing />
       </main>
     </div>
