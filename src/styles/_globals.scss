@@ -2,10 +2,6 @@
   background: $light-accent;
 }
 
-// *:focus {
-//   outline: 1px solid $green;
-// }
-
 a,
 a:link,
 a:visited {
@@ -26,4 +22,13 @@ body {
   min-width: 320px;
   color: black;
   background: white;
+  overflow-x: hidden;
+}
+
+.green {
+  color: $green;
+}
+
+.bold {
+  font-weight: bold;
 }
