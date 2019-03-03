@@ -76,8 +76,6 @@ export default class SavingsCalculator extends React.Component {
     const max =
       outputTextWidth > 200 ? sliderWidth - 64 : sliderWidth - outputTextWidth;
 
-    console.log(sliderWidth, outputTextWidth, max);
-
     const sliderPosition = this.input.value / 10;
 
     const textPosition = sliderPosition * max;

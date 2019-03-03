@@ -8,7 +8,7 @@ import { Helmet } from 'react-helmet';
 // Components
 import Hero from '../components/Hero';
 import Opener from '../components/Opener';
-import WhoWeWorkWith from '../components/WhoWeWorkWith';
+// import WhoWeWorkWith from '../components/WhoWeWorkWith';
 import Testimonials from '../components/Testimonials';
 import ThreeStepPlan from '../components/ThreeStepPlan';
 import About from '../components/About';
@@ -37,6 +37,7 @@ const IndexPage = () => {
         <ThreeStepPlan />
         <Testimonials />
         <About />
+        <PhoneSection />
         {/* <WhoWeWorkWith /> */}
         <Pricing />
       </main>

@@ -35,7 +35,7 @@ export default class Testimonials extends React.Component {
     return (
       <section className="testimonials">
         <h2 className="testimonials-title">
-          Our Goal is To Make Customers Happy
+          Our Customers Are Happy Customers
         </h2>
         <Carousel
           autoplay
