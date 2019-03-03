@@ -17,7 +17,7 @@ export default class ThreeStepPlan extends React.Component {
             through every little detail, explaining the ins-and-outs of every
             step."
           </h2>
-          <p className="plan-quote-text">Andrew and Dallas</p>
+          <p className="plan-quote-text">Dallas and Andrew</p>
           <p className="plan-quote-text">Clients in Modesto, CA</p>
         </div>
         <ol className="plan-list">
