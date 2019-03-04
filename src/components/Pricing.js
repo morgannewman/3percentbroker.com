@@ -8,9 +8,14 @@ export default class Pricing extends React.Component {
     return (
       <section className="pricing" id="pricing">
         <h2 className="pricing-title">The Right Price for Any Seller</h2>
+        <p className="pricing-intro-text">
+          Working with another company may cost you{' '}
+          <span className="bold">thousands</span>. Our pricing is the best in
+          the industry, and we never compromise on quality.
+        </p>
         <div className="pricing-category-container">
           <section className="pricing-category">
-            <h3 className="pricing-category-title">Full Service</h3>
+            <h3 className="pricing-category-title">Flat Rate</h3>
             <p className="pricing-category-subtitle">
               Ultimate savings without compromising on service
             </p>
