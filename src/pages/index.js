@@ -15,6 +15,7 @@ import About from '../components/About';
 import Pricing from '../components/Pricing';
 import PhoneSection from '../components/CTA/Phone';
 import SavingsCalculator from '../components/SavingsCalculator';
+import Footer from '../components/Footer';
 
 const IndexPage = () => {
   return (
@@ -40,6 +41,7 @@ const IndexPage = () => {
         <PhoneSection />
         {/* <WhoWeWorkWith /> */}
         <Pricing />
+        <Footer />
       </main>
     </div>
   );
