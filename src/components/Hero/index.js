@@ -1,10 +1,14 @@
 import React from 'react';
+import postscribe from 'postscribe';
 
 import CTAButton from '../CTA/PrimaryButton';
-import SearchButton from './SearchButton';
+// import SearchButton from "./SearchButton";
 import Nav from './Nav';
 
 export default class Hero extends React.Component {
+  componentDidMount = () => {
+    postscribe('#search-bar', '<script src="https://www.idxhome.com/site/listing/search/widget/114577?style=universal"></script>');
+  };
   render() {
     return (
       <section className="hero">
@@ -18,9 +22,9 @@ export default class Hero extends React.Component {
             <li>Eliminate Confusion</li>
             <li>Get Expert Service</li>
           </ul>
+          <div id="search-bar" className="search-bar" />
           <CTAButton />
-          <SearchButton />
-        </div>
+          </div>
       </section>
     );
   }

@@ -1,5 +1,9 @@
-import React from 'react';
+import React from "react";
 
 export default function Button() {
-  return <button className="cta-primary-button">Schedule a Call</button>;
+  return (
+    <a href="tel:+12097657264" className="cta-button cta-primary-button">
+      Call: 765-7264
+    </a>
+  );
 }

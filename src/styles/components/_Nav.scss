@@ -28,14 +28,14 @@
 }
 
 .nav-link {
-  margin-right: 12px;
+  margin-right: 16px;
 
   &:last-child {
     margin-right: 0px;
   }
 }
 
-button.nav-link {
+button.nav-link, a.nav-link {
   text-transform: uppercase;
   color: white;
 

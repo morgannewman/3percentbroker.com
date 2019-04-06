@@ -22,11 +22,13 @@
     "lodash.debounce": "^4.0.8",
     "node-sass": "^4.11.0",
     "nuka-carousel": "^4.4.8",
+    "postscribe": "^2.0.8",
     "react": "^16.7.0",
     "react-bootstrap": "^1.0.0-beta.5",
     "react-dom": "^16.7.0",
     "react-helmet": "^5.2.0",
     "react-icons": "^3.4.0",
+    "react-inline-script": "^1.2.0",
     "react-typography": "^0.16.18",
     "typography": "^0.16.18"
   },

@@ -16,6 +16,7 @@ import Pricing from '../components/Pricing';
 import PhoneSection from '../components/CTA/Phone';
 import SavingsCalculator from '../components/SavingsCalculator';
 import Footer from '../components/Footer';
+import Contact from '../components/Contact';
 
 const IndexPage = () => {
   return (
@@ -39,8 +40,8 @@ const IndexPage = () => {
         <Testimonials />
         <About />
         <PhoneSection />
-        {/* <WhoWeWorkWith /> */}
         <Pricing />
+        <Contact />
         <Footer />
       </main>
     </div>

@@ -167,11 +167,11 @@
 
   &:first-of-type {
     transform: translateX(-50px);
-    animation: slide-left 3s cubic-bezier(0.250, 0.460, 0.450, 0.940) infinite;
+    animation: slide-left 3s cubic-bezier(0.25, 0.46, 0.45, 0.94) infinite;
   }
   &:last-of-type {
     transform: translateX(50px);
-    animation: slide-right 3s cubic-bezier(0.250, 0.460, 0.450, 0.940) infinite;
+    animation: slide-right 3s cubic-bezier(0.25, 0.46, 0.45, 0.94) infinite;
   }
 }
 
@@ -213,8 +213,12 @@
   font-size: 0.8rem;
   font-style: italic;
 
-  & > button {
-    color: $dark-accent;
+  & > a {
+    &:link,
+    &:visited {
+      color: $dark-accent;
+    }
+
     font-style: inherit;
     font-size: inherit;
 

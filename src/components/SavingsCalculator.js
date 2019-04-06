@@ -1,30 +1,30 @@
-import React from 'react';
-import debounce from 'lodash.debounce';
+import React from "react";
+import debounce from "lodash.debounce";
 
-import LeftArrow from '../assets/svg/left-arrow.svg';
-import RightArrow from '../assets/svg/right-arrow.svg';
+import LeftArrow from "../assets/svg/left-arrow.svg";
+import RightArrow from "../assets/svg/right-arrow.svg";
 
-const numToMoney = (num) =>
+const numToMoney = num =>
   num
-    .toLocaleString('en-US', {
-      style: 'currency',
-      currency: 'USD',
+    .toLocaleString("en-US", {
+      style: "currency",
+      currency: "USD"
     })
     .slice(0, -3);
 
 export default class SavingsCalculator extends React.Component {
   state = {
-    savings: '$15,000',
-    value: '$500,000',
+    savings: "$15,000",
+    value: "$500,000",
     outputOffset: 0,
     touched: false,
     leftOverlap: false,
-    rightOverlap: false,
+    rightOverlap: false
   };
 
   componentDidMount = () => {
     this.updateAfterResize = debounce(this.updateSliderText, 100);
-    this.resizeListener = window.addEventListener('resize', () =>
+    this.resizeListener = window.addEventListener("resize", () =>
       this.updateAfterResize()
     );
   };
@@ -39,13 +39,13 @@ export default class SavingsCalculator extends React.Component {
 
     const outputOffset = this.calculateOutputOffset();
 
-    this.setState((state) => ({
+    this.setState(state => ({
       savings: numToMoney(savings),
       value: numToMoney(value),
-      outputOffset: outputOffset + 'px',
+      outputOffset: outputOffset + "px",
       ...this.detectSliderTextOverlap(outputOffset),
       // Prevents debounced calls from updating touched state
-      touched: e ? true : state.touched,
+      touched: e ? true : state.touched
     }));
   };
 
@@ -83,7 +83,7 @@ export default class SavingsCalculator extends React.Component {
     return textPosition;
   };
 
-  detectSliderTextOverlap = (textPosition) => {
+  detectSliderTextOverlap = textPosition => {
     const sliderWidth = this.input.getBoundingClientRect().width;
 
     const outputTextWidth = this.output.getBoundingClientRect().width;
@@ -142,30 +142,30 @@ export default class SavingsCalculator extends React.Component {
             />
           )}
           <output
-            className={`savings-calculator-output ${!touched
-              ? 'savings-calculator-output_untouched'
-              : ''}`}
-            ref={(output) => (this.output = output)}
+            className={`savings-calculator-output ${
+              !touched ? "savings-calculator-output_untouched" : ""
+            }`}
+            ref={output => (this.output = output)}
             style={
-              touched ? { marginLeft: this.calculateOutputOffset() + 'px' } : {}
+              touched ? { marginLeft: this.calculateOutputOffset() + "px" } : {}
             }
           >
             {value}
           </output>
 
           <label
-            className={`savings-calculator-slider-range-text savings-calculator-slider-range-text_left ${leftOverlap
-              ? 'hidden'
-              : ''}`}
-            ref={(n) => (this.leftRangeText = n)}
+            className={`savings-calculator-slider-range-text savings-calculator-slider-range-text_left ${
+              leftOverlap ? "hidden" : ""
+            }`}
+            ref={n => (this.leftRangeText = n)}
           >
             $150,000
           </label>
           <label
-            className={`savings-calculator-slider-range-text savings-calculator-slider-range-text_right ${rightOverlap
-              ? 'hidden'
-              : ''}`}
-            ref={(n) => (this.rightRangeText = n)}
+            className={`savings-calculator-slider-range-text savings-calculator-slider-range-text_right ${
+              rightOverlap ? "hidden" : ""
+            }`}
+            ref={n => (this.rightRangeText = n)}
           >
             $2,000,000
           </label>
@@ -173,7 +173,7 @@ export default class SavingsCalculator extends React.Component {
           <input
             onInput={this.updateSliderText}
             className="savings-calculator-slider"
-            ref={(input) => (this.input = input)}
+            ref={input => (this.input = input)}
             type="range"
             min="0"
             max="10"
@@ -187,8 +187,9 @@ export default class SavingsCalculator extends React.Component {
           )}
         </div>
         <p className="savings-calculator-disclaimer">
-          These savings are just an estimate and may vary. Please{' '}
-          <button>schedule a call</button> for a free professional estimate.
+          These savings are just an estimate and may vary. Please{" "}
+          <a href="tel:+12097657264">call now</a> for a free professional
+          estimate.
         </p>
       </section>
     );

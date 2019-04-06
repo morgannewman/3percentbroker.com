@@ -1,0 +1,51 @@
+.contact {
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+  text-align: center;
+
+  label {
+    display: block;
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+  }
+
+  &-title,
+  &-text {
+    @include apply-max-width;
+    margin-bottom: 1rem;
+  }
+
+  input,
+  textarea {
+    width: 100%;
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    font-size: 1.2rem;
+    border: 1px solid $dark-accent;
+  }
+}
+
+.contact-form {
+  display: block;
+  width: 400px;
+  max-width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+
+  & > textarea {
+    height: 4rem;
+    resize: none;
+  }
+
+  & > button {
+    width: 100%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: $green;
+    color: white;
+    border: none;
+    padding: 0.5rem 0;
+    font-size: 1.2rem;
+  }
+}

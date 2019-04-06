@@ -1,28 +1,32 @@
-import React from 'react';
-
-import { MdSearch as SearchIcon } from 'react-icons/md';
+import React from "react";
 
 export default class Nav extends React.Component {
+  componentDidMount = () => {
+  };
+
+  scrollToPricing = () => {
+    const pricing = document.querySelector("#pricing");
+    pricing.scrollIntoView({ block: "start", behavior: "smooth" });
+  };
+
   render() {
     const { className } = this.props;
     return (
-      <header className={`nav ${className || ''}`}>
+      <header className={`nav ${className || ""}`}>
         <a href="/">
           <img
             className="nav-logo"
-            src={require('../../assets/white-logo.png')}
+            src={require("../../assets/white-logo.png")}
             alt="3PercentBroker.com Logo"
           />
         </a>
         <nav className="nav-nav">
-          <a className="nav-link" href="#Pricing">
+          <button onClick={this.scrollToPricing} className="nav-link">
             Pricing
-          </a>
-          <button className="nav-link nav-link_search">
-            <span className="nav-link_search-text">Property Search</span>{' '}
-            <SearchIcon className="nav-link_search-icon" />
           </button>
-          <button className="nav-link">209-765-7264</button>
+          <a href="#" className="nav-link nav-link_search">
+            <span className="nav-link_search-text">Property Search</span>
+          </a>
         </nav>
       </header>
     );

@@ -1,9 +1,14 @@
 $color: $green;
 
 .cta-primary-button {
+  display: block;
+
   color: white;
+  text-align: center;
+  font-style: normal;
+  line-height: 2.2rem;
   background-color: $color;
-  font-size: .9rem;
+  font-size: 1rem;
   text-transform: uppercase;
   letter-spacing: 0.05em;
 
@@ -31,7 +36,10 @@ $color: $green;
     background: none;
     border: none;
     font-size: 1.6rem;
-    color: $green;
+    &:link,
+    &:visited {
+      color: $green;
+    }
   }
 }
 
@@ -40,7 +48,11 @@ $color: $green;
   font-style: italic;
 }
 
-.cta > button {
+.cta > .cta-button {
+  color: white;
+
+  margin-left: auto;
+  margin-right: auto;
   margin-bottom: 8px;
 }
 

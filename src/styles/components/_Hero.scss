@@ -10,7 +10,7 @@
     text-align: left;
   }
 
-  background-image: url('../../src/assets/hero.png');
+  background-image: url("../../src/assets/hero.png");
   background-size: cover;
   background-position: center;
 }
@@ -59,10 +59,15 @@
   }
 }
 
-.hero-content > button {
+.hero-content > .cta-button {
   display: block;
   margin-left: auto;
   margin-right: auto;
+
+  &:link,
+  &:visited {
+    color: white;
+  }
 
   &:first-of-type {
     margin-bottom: 1rem;
@@ -112,5 +117,20 @@
         content: none;
       }
     }
+  }
+}
+
+.search-bar {
+  background-color: #F8F9FA;
+  height: 56px;
+
+  margin-bottom: 16px;
+
+  @media (min-width: 420px) {
+    margin-bottom: 16px 32px;
+  }
+
+  @media (min-width: 824px) {
+    margin-bottom: 32px 64px;
   }
 }
