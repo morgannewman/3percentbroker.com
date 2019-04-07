@@ -25,7 +25,7 @@ export default class Nav extends React.Component {
             Pricing
           </button>
           <a 
-            href='https://search.3percentbroker.com/homesearch'
+            href='https://search.3percentbroker.com/homesearch/114577'
             target="_blank"
             rel="noreferrer noopener"
             className="nav-link nav-link_search"

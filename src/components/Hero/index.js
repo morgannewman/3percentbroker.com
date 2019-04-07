@@ -11,7 +11,7 @@ if (typeof window !== 'undefined') {
 
 export default class Hero extends React.Component {
   componentDidMount() {
-    postscribe('#search-bar', '<script src="https://www.idxhome.com/site/listing/search/widget/114577?style=universal"></script>');
+    postscribe('#search-bar', '<script src="https://www.search.3percentbroker.com/site/listing/search/widget/114577?style=universal"></script>');
   }
 
   render() {
