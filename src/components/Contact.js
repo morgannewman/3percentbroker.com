@@ -1,4 +1,5 @@
 import React from "react";
+import * as Sentry from '@sentry/browser';
 
 import checkmark from '../assets/svg/checkmark.svg';
 import { goFetch } from './helpers';
@@ -26,6 +27,7 @@ export default class Contact extends React.Component {
           return this.setState({ error: null, state: 'submitted' });
         })
         .catch((err) => {
+          Sentry.captureException(err);
           // On error, reopen form and restore input
           this.setState({
             state: 'open',
