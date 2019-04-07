@@ -1,7 +1,5 @@
 import React from 'react';
 
-import Nav from '../components/Hero/Nav';
-
 export default class Search extends React.Component {
   render() {
     return (
