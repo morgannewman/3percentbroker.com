@@ -27,6 +27,7 @@
     "react": "^16.7.0",
     "react-bootstrap": "^1.0.0-beta.5",
     "react-dom": "^16.7.0",
+    "react-ga": "^2.5.7",
     "react-helmet": "^5.2.0",
     "react-icons": "^3.4.0",
     "react-inline-script": "^1.2.0",
@@ -35,7 +36,7 @@
   },
   "license": "MIT",
   "scripts": {
-    "build": "gatsby build",
+    "build": "gatsby build && cp _redirects public/_redirects",
     "start": "gatsby develop",
     "format": "prettier --write \"src/**/*.js\"",
     "test": "echo \"Whoops! No tests.\" && exit 0"

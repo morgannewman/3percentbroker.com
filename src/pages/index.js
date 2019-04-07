@@ -2,6 +2,7 @@ import '../styles/main.scss';
 
 import React from 'react';
 import * as Sentry from '@sentry/browser';
+import ReactGA from 'react-ga';
 // Gatsby
 import { Helmet } from 'react-helmet';
 // Components
@@ -19,6 +20,11 @@ import Contact from '../components/Contact';
 class IndexPage extends React.Component {
   componentDidMount() {
     Sentry.init({ dsn: 'https://f21f63d549ef45d9ba3f9b24672f2696@sentry.io/1432924' });
+    
+    if (process.env.REACT_APP_GA_ID) {
+      ReactGA.initialize(process.env.REACT_APP_GA_ID);
+      ReactGA.pageview(window.location.pathname + window.location.search);
+    }
   }
 
   render() {
