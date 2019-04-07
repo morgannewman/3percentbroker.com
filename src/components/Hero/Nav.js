@@ -24,8 +24,13 @@ export default class Nav extends React.Component {
           <button onClick={this.scrollToPricing} className="nav-link">
             Pricing
           </button>
-          <a href="#" className="nav-link nav-link_search">
-            <span className="nav-link_search-text">Property Search</span>
+          <a 
+            href='https://search.3percentbroker.com/homesearch'
+            target="_blank"
+            rel="noreferrer noopener"
+            className="nav-link nav-link_search"
+          >
+          <span className="nav-link_search-text">Property Search</span>
           </a>
         </nav>
       </header>

@@ -49,3 +49,32 @@
     font-size: 1.2rem;
   }
 }
+
+.contact-error {
+  width: 400px;
+  max-width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  word-wrap: unset;
+  
+  padding: 8px;
+  margin-bottom: 1rem;
+
+  background-color: salmon;
+  color: white;
+
+}
+
+.contact-form-submitting-text {
+  font-style: italic;
+}
+
+.contact-form-success-icon {
+  height: 100px;
+  margin-bottom: 0.5rem;
+}
+
+.contact-form-success-text__two {
+  display: block;
+  margin-top: 0.25rem;
+}
