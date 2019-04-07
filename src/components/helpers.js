@@ -1,4 +1,4 @@
-const BACKEND_URL = process.env.REACT_APP_BACKEND_URL || 'https://a71fd72cnj.execute-api.us-west-2.amazonaws.com/dev';
+const BACKEND_URL = process.env.GATSBY_BACKEND_URL || 'https://a71fd72cnj.execute-api.us-west-2.amazonaws.com/dev';
 
 /**
  * Normalizes the behavior of fetch calls to RESTful APIs that return JSON.
