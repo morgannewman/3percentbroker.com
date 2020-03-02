@@ -4,15 +4,26 @@ import * as Sentry from '@sentry/browser';
 import checkmark from '../assets/svg/checkmark.svg';
 import { goFetch } from './helpers';
 import Loading from './Loading';
+import Recaptcha from 'react-recaptcha';
 
 export default class Contact extends React.Component {
   state = {
     error: null,
-    state: 'open' // ('open', 'submitting', 'submitted')
+    state: 'open', // ('open', 'submitting', 'submitted')
+  }
+
+  recaptchaInstance = null;
+
+  executeCaptcha = (e) => {
+    e.preventDefault();
+    console.log('it worked');
+    console.log(this.recaptchaInstance);
+    this.recaptchaInstance.execute();
   }
 
   handleSubmit = (e) => {
-    e.preventDefault();
+    return this.setState({state: 'submitted'});
+
     const message = this.message.value;
     const email = this.email.value;
     const name = this.name.value;
@@ -75,7 +86,7 @@ export default class Contact extends React.Component {
         </p>
         {error && <p className="contact-error" role="alert">{error}</p>}
         {showForm ? (
-          <form className="contact-form" onSubmit={this.handleSubmit}>
+          <form className="contact-form" onSubmit={this.executeCaptcha}>
           <div className="contact-form-input-group">
             <label htmlFor="contact-form-name" className="contact-form-label">
               Name
@@ -107,6 +118,12 @@ export default class Contact extends React.Component {
             ref={message => this.message = message}
           />
           <button type="submit">Submit</button>
+          <Recaptcha
+            ref={e => this.recaptchaInstance = e}
+            sitekey="6LcPY90UAAAAAARLwoHPXqAqS_pZYp2rHvHxWGYS"
+            size="invisible"
+            verifyCallback={this.handleSubmit}
+          />
         </form>
         ) : (
           this.renderOtherFormStates()
