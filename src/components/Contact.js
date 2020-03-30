@@ -9,7 +9,8 @@ import ReCaptcha from "../components/Recaptcha";
 export default class Contact extends React.Component {
   state = {
     error: null,
-    state: "open", // ('open', 'submitting', 'submitted')
+    state: "open", // ('open', 'submitting', 'submitted'),
+    isProd: process.env.NODE_ENV !== 'development',
   };
 
   recaptchaInstance = null;
@@ -25,7 +26,7 @@ export default class Contact extends React.Component {
     this.recaptchaInstance.execute();
   };
 
-  submitForm = (_recaptchaToken) => {
+  submitForm = () => {
     const message = this.message.value;
     const email = this.email.value;
     const name = this.name.value;
@@ -39,7 +40,12 @@ export default class Contact extends React.Component {
           return this.setState({ error: null, state: "submitted" });
         })
         .catch((err) => {
-          Sentry.captureException(err);
+          if (this.state.isProd) {
+            Sentry.captureException(err);
+          } else {
+            console.log(err);
+          }
+
           // On error, reopen form and restore input
           this.setState(
             {
@@ -99,7 +105,7 @@ export default class Contact extends React.Component {
           </p>
         )}
         {showForm ? (
-          <form className="contact-form" onSubmit={this.executeCaptcha}>
+          <form className="contact-form" onSubmit={this.state.isProd ? this.executeCaptcha: this.submitForm}>
             <div className="contact-form-input-group">
               <label htmlFor="contact-form-name" className="contact-form-label">
                 Name
@@ -140,14 +146,14 @@ export default class Contact extends React.Component {
               <a href="https://policies.google.com/terms">Terms of Service</a>{" "}
               apply.
             </div>
-            <ReCaptcha
+            {this.state.isProd && <ReCaptcha
               ref={(element) => (this.recaptchaInstance = element)}
               size="invisible"
               render="explicit"
               sitekey="6LcPY90UAAAAAARLwoHPXqAqS_pZYp2rHvHxWGYS"
               onloadCallback={this.onLoadRecaptcha}
               verifyCallback={this.submitForm}
-            />
+            />}
             <button type="submit">Submit</button>
           </form>
         ) : (
