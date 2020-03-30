@@ -42,6 +42,7 @@ class IndexPage extends React.Component {
             href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,400i,700"
             rel="stylesheet"
           />
+          <script src="https://www.google.com/recaptcha/api.js" async defer />
         </Helmet>
         <main className="main">
           <Hero />

@@ -1,4 +1,7 @@
 {
+  "engines": {
+    "node": ">=10.0.0 <11.0.0"
+  },
   "name": "3percentbroker.com",
   "author": "Morgan Newman <mpnewman95@gmail.com>",
   "dependencies": {
