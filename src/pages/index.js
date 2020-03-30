@@ -19,7 +19,9 @@ import Contact from '../components/Contact';
 
 class IndexPage extends React.Component {
   componentDidMount() {
-    Sentry.init({ dsn: 'https://f21f63d549ef45d9ba3f9b24672f2696@sentry.io/1432924' });
+    if (process.env.NODE_ENV !== 'development') {
+      Sentry.init({ dsn: 'https://f21f63d549ef45d9ba3f9b24672f2696@sentry.io/1432924' });
+    }
     
     const id = process.env.GATSBY_GA_ID || null;
     if (id) {
