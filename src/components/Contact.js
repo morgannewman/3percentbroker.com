@@ -8,9 +8,19 @@ import ReCaptcha from "../components/Recaptcha";
 
 export default class Contact extends React.Component {
   state = {
+    captchaReady: false,
     error: null,
     state: "open", // ('open', 'submitting', 'submitted'),
-    isProd: process.env.NODE_ENV !== 'development',
+    isProd: process.env.NODE_ENV !== "development",
+  };
+
+  componentDidMount = () => {
+    this.captchaInterval = setInterval(() => {
+      if (window.recaptcha != null) {
+        this.setState({ captchaReady: true });
+        clearInterval(this.captchaInterval);
+      }
+    }, 300);
   };
 
   recaptchaInstance = null;
@@ -92,6 +102,9 @@ export default class Contact extends React.Component {
   render() {
     const { error } = this.state;
     const showForm = this.state.state === "open";
+    if (!this.state.captchaReady) {
+      return <div />;
+    }
 
     return (
       <section className="contact" id="contact">
@@ -105,7 +118,10 @@ export default class Contact extends React.Component {
           </p>
         )}
         {showForm ? (
-          <form className="contact-form" onSubmit={this.state.isProd ? this.executeCaptcha: this.submitForm}>
+          <form
+            className="contact-form"
+            onSubmit={this.state.isProd ? this.executeCaptcha : this.submitForm}
+          >
             <div className="contact-form-input-group">
               <label htmlFor="contact-form-name" className="contact-form-label">
                 Name
@@ -146,14 +162,16 @@ export default class Contact extends React.Component {
               <a href="https://policies.google.com/terms">Terms of Service</a>{" "}
               apply.
             </div>
-            {this.state.isProd && <ReCaptcha
-              ref={(element) => (this.recaptchaInstance = element)}
-              size="invisible"
-              render="explicit"
-              sitekey="6LcPY90UAAAAAARLwoHPXqAqS_pZYp2rHvHxWGYS"
-              onloadCallback={this.onLoadRecaptcha}
-              verifyCallback={this.submitForm}
-            />}
+            {this.state.isProd && (
+              <ReCaptcha
+                ref={(element) => (this.recaptchaInstance = element)}
+                size="invisible"
+                render="explicit"
+                sitekey="6LcPY90UAAAAAARLwoHPXqAqS_pZYp2rHvHxWGYS"
+                onloadCallback={this.onLoadRecaptcha}
+                verifyCallback={this.submitForm}
+              />
+            )}
             <button type="submit">Submit</button>
           </form>
         ) : (
