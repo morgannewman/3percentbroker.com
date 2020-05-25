@@ -78,3 +78,17 @@
   display: block;
   margin-top: 0.25rem;
 }
+
+.contact-recaptcha-text {
+  margin: -0.5rem 0 1rem 0;
+  color: gray;
+  font-style: italic;
+
+  a {
+    color: $dark-grey;
+  }
+}
+
+.grecaptcha-badge { 
+  visibility: hidden;
+}
